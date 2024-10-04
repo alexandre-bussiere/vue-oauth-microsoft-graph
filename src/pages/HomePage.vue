@@ -11,13 +11,17 @@ export default {
     components: {
         AsyncComponent,
     },
+    data: () => ({
+        clickCount: 0,
+    }),
     methods: {
         Wait() {
             return new Promise((resolve) => {
                 setTimeout(() => {
-                console.log('Operation complete!');
+                this.clickCount++;
+                console.log(this.clickCount);
                 resolve();
-                }, 2000); 
+                }, this.clickCount * 1000); 
             });
         }
     }

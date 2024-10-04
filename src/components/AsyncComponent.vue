@@ -21,16 +21,16 @@ export default {
       isPending: false,
     };
   },
+
   methods: {
     handleClick() {
-      const originalOnClick = this.$attrs.onClick;
-
-      if (originalOnClick && typeof originalOnClick === 'function') {
-        this.isPending = true;
-        originalOnClick().finally(() => {
-          this.isPending = false; 
-        });
-      }
+        const originalOnClick = this.$attrs.onClick;
+        if (originalOnClick && typeof originalOnClick === 'function') {
+            this.isPending = true;
+            originalOnClick().finally(() => {
+                this.isPending = false; 
+            });
+        }
     }
   }
 };
