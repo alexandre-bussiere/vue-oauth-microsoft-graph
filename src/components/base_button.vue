@@ -25,6 +25,12 @@ export default {
     buttonClasses() {
       return `base-button base-button--${this.color}`;
     }
+  },
+
+  methods: {
+    handleClick() {
+      this.$emit('click');
+    }
   }
 };
 </script>
@@ -71,6 +77,5 @@ export default {
 
 .base-button:disabled {
   background-color: #bdc3c7;
-  cursor: not-allowed;
 }
 </style>

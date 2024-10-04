@@ -1,22 +1,28 @@
 <template>
     <div class="Home">
-        <p>Welcome to the Home Page!</p>
-        <base-button :disabled="false" color="primary">Test button</base-button>
-        <base-button :disabled="false" color="warn">Test button</base-button>
-        <base-button :disabled="false" color="danger">Test button</base-button>
+        <async-component @click="Wait"/>
     </div>
 </template>
 
 <script>
-import BaseButton from '../components/base_button.vue';
-
+import AsyncComponent from '../components/AsyncComponent.vue';
 export default {
     name: 'HomePage',
     components: {
-        BaseButton,
+        AsyncComponent,
     },
-
+    methods: {
+        Wait() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                console.log('Operation complete!');
+                resolve();
+                }, 2000); 
+            });
+        }
+    }
 }
+
 </script>
 
 <style scoped>
