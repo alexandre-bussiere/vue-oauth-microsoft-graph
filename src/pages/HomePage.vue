@@ -1,8 +1,9 @@
 <template>
     <div class="Home">
         <p>Welcome to the Home Page!</p>
-        <base-button :disabled="true">Test button</base-button>
-        <base-button :disabled="false">Test button</base-button>
+        <base-button :disabled="false" color="primary">Test button</base-button>
+        <base-button :disabled="false" color="warn">Test button</base-button>
+        <base-button :disabled="false" color="danger">Test button</base-button>
     </div>
 </template>
 

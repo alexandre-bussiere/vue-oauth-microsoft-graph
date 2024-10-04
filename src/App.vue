@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import HomePage from './pages/HomePage.vue'
+import HomePage from './pages/HomePage.vue';
 import base_layout from './components/base_layout.vue';
 
 export default {
